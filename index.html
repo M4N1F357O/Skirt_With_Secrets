@@ -16,19 +16,26 @@
       align-items: center; /* Centrar contenido verticalmente */
       height: 100vh; /* Altura del viewport */
     }
-    .container {
-      width: 90%; /* Ancho del 90% de la pantalla */
-      max-width: 400px; /* Ancho máximo */
-      border: 2px solid #000000; /* Borde negro */
-      border-radius: 10px; /* Bordes redondeados */
-      padding: 20px;
-      margin-top: 20px; /* Margen superior */
-    }
+
     .section {
       margin-bottom: 20px;
       border-bottom: 1px solid #000000; /* Línea negra inferior */
       cursor: pointer; /* Cambiar cursor al señalar */
     }
+
+    .container {
+  width: 90%; /* Ancho del 90% de la pantalla */
+  max-width: 300px; /* Ancho máximo del contenedor reducido */
+  border: 2px solid #000000; /* Borde negro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px;
+  margin-top: 20px; /* Margen superior */
+}
+
+.section img {
+  max-width: 100%; /* Ajustar tamaño máximo de la imagen */
+  height: auto; /* Mantener proporción de la imagen */
+}
     .hidden-info {
       display: none;
     }
