@@ -14,28 +14,20 @@
       display: flex;
       justify-content: center; /* Centrar contenido horizontalmente */
       align-items: center; /* Centrar contenido verticalmente */
-      height: 100vh; /* Altura del viewport */
+      height: 120vh; /* Altura del viewport */
     }
+    .container {
+      width: 90%; /* Ancho del 90% de la pantalla */
+      max-width: 300px; /* Ancho máximo */
+      border: 2px solid #000000; /* Borde negro */
+      border-radius: 10px; /* Bordes redondeados */
+      padding: 20px;
 
+    }
     .section {
-      margin-bottom: 20px;
       border-bottom: 1px solid #000000; /* Línea negra inferior */
       cursor: pointer; /* Cambiar cursor al señalar */
     }
-
-    .container {
-  width: 90%; /* Ancho del 90% de la pantalla */
-  max-width: 300px; /* Ancho máximo del contenedor reducido */
-  border: 2px solid #000000; /* Borde negro */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px;
-  margin-top: 20px; /* Margen superior */
-}
-
-.section img {
-  max-width: 100%; /* Ajustar tamaño máximo de la imagen */
-  height: auto; /* Mantener proporción de la imagen */
-}
     .hidden-info {
       display: none;
     }
@@ -49,42 +41,45 @@
       text-align: right; /* Alinear texto a la derecha */
       max-width: calc(100% - 40px); /* Ajustar ancho para evitar desbordamiento */
     }
-    .section img {
-      max-width: 100%; /* Ajustar tamaño de la imagen al tamaño del contenedor padre */
-      height: auto; /* Mantener la proporción de la imagen */
+
+    .image
+    {
+      height: 300px;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
+
+    <img class="image" src="images/skirt.gif" alt="Foto del item" style="display: block; margin: 0 auto; max-width: 80%;">
+
     <div class="section" onclick="toggleInfo('info1')">
-      <!-- Centrar la imagen y ajustarla al tamaño del div padre -->
-      <img src="images/skirt.gif" alt="Foto del item" style="display: block; margin: 0 auto;">
       <h2>Item</h2>
-      
       <div id="info1" class="hidden-info">
-        <p>Skirt With Secrets</p>
+        <p><b>Skirt With Secrets</b></p>
         <p>Wear elegance without compromise privacy.</p>
         <p>Crafted with artisan techniques and luxurious sustainable materials: Ahimsa silk and recycled polyester.</p>
         <p>Cleverly hidden 10x10cm interior pocket.</p>
+      </div>
     </div>
 
-     <div class="section" onclick="toggleInfo('info2')">
+    <div class="section" onclick="toggleInfo('info2')">
       <h2>Product code</h2>
       <div id="info2" class="hidden-info">
         <p>M-0001010</p>
         <p>Uploaded on the blockchain: 21/03/2024</p>
         <!-- ajustar el tamaño del texto para evitar desbordamiento -->
-        <p>Blockchain transaction ID <b>44e25bc0ed840f9bf0e58d6227db15192d 5b89e79ba4304da16b09703f68ceaf</b></p>
+        <p>Blockchain transaction ID: </p>
+        <p style="width: 100%;">44e25bc0ed840f9bf0e58d6227db1519 2d5b89e79ba4304da16b09703f68ceaf</p>
       </div>
     </div>
 
     <div class="section" onclick="toggleInfo('info3')">
       <h2>Materials</h2>
       <div id="info3" class="hidden-info">
-        <p>Fabric: 80% Silk, 20% Polyester.</p>
-        <p>Lining: 100% Silk.</p>
+        <p>Fabric: 80% Ahimsa Silk, 20% Polyester.</p>
+        <p>Lining: 100% Ahimsa Silk.</p>
       </div>
     </div>
 
@@ -99,7 +94,7 @@
       </div>
     </div>
 
-    <div class="section" onclick="toggleInfo('info5')">
+    <div class="section " onclick="toggleInfo('info5')">
       <h2>Skirt's journey</h2>
       <div id="info5" class="hidden-info">
         <p>Step 1. Origin of textiles</p>
@@ -121,9 +116,6 @@
         <p>Resale & Transfer of Ownership</p>
       </div>
     </div>
-
-
-      
   </div>
 
   <script>
